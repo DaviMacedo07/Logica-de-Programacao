@@ -13,22 +13,13 @@ console.log(` Olá ${nome}, você tem ${idade}, é ${profissao} , tem ${altura}M
  console.log("Sem gelada para você")
 }
 
-function calcularDetalhadametne() {
+let meses = idade * 12;
+let semanas = idade * 7
+let dias = idade * 365
 
-const diasPorAno = 365 * idade
-const diasPorMeses = 30 * idade
-const diasPorSemana = 7 * idade
-
-return {
-    ano : diasPorAno ,
-    meses : diasPorMeses ,
-    semana: diasPorSemana   
-}
-
-}
-console.log(calcularDetalhadametne()) 
- 
-
+console.log(`Sua idade em meses é : ${meses} `)
+console.log(`Sua idade em semanas é : ${semanas} `)
+console.log(`Sua idade em dias é : ${dias} `)
 
 if(imc < 18.5) {
     console.log("Seu imc é classificado como : Magreza")
@@ -38,4 +29,16 @@ if(imc < 18.5) {
     console.log("Seu imc é classificado como : Sobrepeso")
 } else {
     console.log("Seu imc é classificado como : Obeso")
+}
+
+let anoAtual= 2023
+let anoNasc = anoAtual - idade
+console.log(`${nome} , você nasceu em ${anoNasc}`)
+
+let anoVivido = anoNasc
+let idadeAtual = 0
+
+for(let anoVivido = anoNasc; anoVivido <= anoAtual; anoVivido++) {
+    console.log(`${anoVivido} - ${idadeAtual} anos de idade`)
+    idadeAtual++
 }
