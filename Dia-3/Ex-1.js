@@ -1,18 +1,17 @@
-let nome = (prompt("Qual seu nome?"))
+let nome = prompt("Qual seu nome?")
 let idade = parseInt(prompt("Qual sua idade?"))
-let peso = parseFloat(prompt("Qual seu peso em Kg?"))
-let altura = Number(prompt("QUal sua altura?"))
-let profissao = (prompt("Qual sua profissão")) ;
-
+let peso = prompt("Qual seu peso em Kg? Use .")
+let altura = prompt("Qual sua altura? Use .")
+let profissao = prompt("Qual sua profissão") ;
+let imc = peso / (altura * altura)
 
 console.log(` Olá ${nome}, você tem ${idade}, é ${profissao} , tem ${altura}M e pesa ${peso}Kg`)
 
-if (idade >= 18) {
+    if (idade >= 18) {
     console.log("Esta liberado para tomar umas geladas")
-} else {
-    console.log("Sem gelada para você")
+ }  else {
+ console.log("Sem gelada para você")
 }
-
 
 function calcularDetalhadametne() {
 
@@ -26,7 +25,17 @@ return {
     semana: diasPorSemana   
 }
 
-
 }
+console.log(calcularDetalhadametne()) 
+ 
 
-console.log(calcularDetalhadametne())
+
+if(imc < 18.5) {
+    console.log("Seu imc é classificado como : Magreza")
+} else if (imc >= 18.5 && imc <= 24.9 ) {
+    console.log("Seu imc é classificado como : Normal")
+} else if (imc >= 25 && imc <= 30 ) {
+    console.log("Seu imc é classificado como : Sobrepeso")
+} else {
+    console.log("Seu imc é classificado como : Obeso")
+}
