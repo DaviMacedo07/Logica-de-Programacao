@@ -1,16 +1,16 @@
 let nomes = []
+let posicaoDoArray = 0
 let continuar = true
-let positionDoArray = 0;
 
-while(continuar) {
-    let nomeInserido = prompt("Insira um nome")
-    nomes[positionDoArray] = nomeInserido
+while(continuar === true) {
+    let nomesInseridos = prompt("Insira um nome")
+    nomes[posicaoDoArray] = nomesInseridos
 
-    let desejaContinuar = prompt("Insira 1 caso deseje continuar")
-    if(desejaContinuar != 1) {
+    let desejaContinuar = prompt("Deseja continuar ? Digite 1 para sim") 
+    if(desejaContinuar != "1"){
         continuar = false
-        continue
+        continue;
     }
-
-    positionDoArray++
+    posicaoDoArray++;
+    console.log(nomes)
 }
